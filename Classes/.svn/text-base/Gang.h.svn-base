@@ -1,0 +1,31 @@
+//
+//  Gang.h
+//  NJ Gangs
+//
+//  Created by John Jones on 10/18/10.
+//  Copyright 2010 Phoenix4. All rights reserved.
+//
+
+#import <CoreData/CoreData.h>
+
+
+@interface Gang :  NSManagedObject  
+{
+}
+
+@property (nonatomic, retain) NSString * Name;
+@property (nonatomic, readonly) NSString * FirstLetterOfName;
+@property (nonatomic, retain) NSSet* Municip;
+@property (nonatomic, readonly) NSNumber * NumMunicips;
+
+@end
+
+
+@interface Gang (CoreDataGeneratedAccessors)
+- (void)addMunicipObject:(NSManagedObject *)value;
+- (void)removeMunicipObject:(NSManagedObject *)value;
+- (void)addMunicip:(NSSet *)value;
+- (void)removeMunicip:(NSSet *)value;
+
+@end
+

@@ -1,0 +1,162 @@
+//
+//  ManagedTableViewController.m
+//
+//  Created by John Jones on 8/24/10.
+//
+
+#import "ManagedTableViewController.h"
+
+@implementation ManagedTableViewController
+
+@synthesize fetchedResultsController, managedObjectContext;
+
+- (id)initWithManagedObjectContext:(NSManagedObjectContext*)context {
+	if (self = [super initWithStyle:UITableViewStylePlain]) {
+		self.managedObjectContext = context;
+	}
+	return self;
+}
+
+- (BOOL)direction {
+	return YES;
+}
+
+#pragma mark -
+#pragma mark View lifecycle
+
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    self.clearsSelectionOnViewWillAppear = NO;
+    self.contentSizeForViewInPopover = CGSizeMake(320.0, 600.0);
+	NSError *error = nil;
+    if (![[self fetchedResultsController] performFetch:&error]) {
+        NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
+    }
+	self.navigationController.navigationBar.tintColor = [UIColor grayColor];
+	self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
+	self.view.backgroundColor = [UIColor colorWithRed:0.3 green:0.25 blue:0.25 alpha:1];
+}
+
+- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
+    return (interfaceOrientation == UIInterfaceOrientationPortrait) || (interfaceOrientation == UIInterfaceOrientationPortraitUpsideDown);
+}
+
+#pragma mark -
+#pragma mark Table view data source
+
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+    return [[fetchedResultsController sections] count];
+}
+
+- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
+	return [[[fetchedResultsController sections] objectAtIndex:section] name];
+}
+
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    id <NSFetchedResultsSectionInfo> sectionInfo = [[fetchedResultsController sections] objectAtIndex:section];
+    int i = [sectionInfo numberOfObjects];
+	return i;
+}
+
+- (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath {
+	if (indexPath.row % 2) {
+		cell.backgroundColor = [UIColor colorWithRed:0.15 green:0.15 blue:0.15 alpha:1];
+	} else {
+		cell.backgroundColor = [UIColor colorWithRed:0.3 green:0.25 blue:0.25 alpha:1];
+	}
+	cell.textLabel.textColor = [UIColor colorWithRed:0.8 green:0.8 blue:0.8 alpha:1];
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    static NSString *CellIdentifier = @"Cell";
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+    if (cell == nil) {
+        cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier] autorelease];
+    }
+	[self configureCell:cell atIndexPath:indexPath];
+    return cell;
+}
+
+
+- (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
+	UIView *view = [[[UIView alloc] initWithFrame:CGRectMake(0, 0, tableView.bounds.size.width, 22)] autorelease];
+	[view setBackgroundColor:[UIColor blackColor]];
+	return view;
+}
+
+
+- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath {
+    return NO;
+}
+
+- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
+	return NO;
+}
+
+#pragma mark -
+#pragma mark Fetched results controller
+
+- (NSFetchedResultsController *)fetchedResultsController {
+    
+    if (fetchedResultsController != nil) {
+        return fetchedResultsController;
+    }
+    
+    /*
+     Set up the fetched results controller.
+     */
+    // Create the fetch request for the entity.
+    NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
+    // Edit the entity name as appropriate.
+    NSEntityDescription *entity = [NSEntityDescription entityForName:[self fetchObject] inManagedObjectContext:managedObjectContext];
+    [fetchRequest setEntity:entity];
+    
+    // Set the batch size to a suitable number.
+    [fetchRequest setFetchBatchSize:20];
+    
+    // Edit the sort key as appropriate.
+    NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc] initWithKey:[self sortObject] ascending: [self direction]];
+    NSArray *sortDescriptors = [[NSArray alloc] initWithObjects:sortDescriptor, nil];
+    
+    [fetchRequest setSortDescriptors:sortDescriptors];
+	
+	NSPredicate* predicate = [self predicate];
+	if (predicate != nil) {
+		[fetchRequest setPredicate:predicate];
+	}
+    
+    // Edit the section name key path and cache name if appropriate.
+    // nil for section name key path means "no sections".
+	[NSFetchedResultsController deleteCacheWithName:[self fetchObject]];
+    NSFetchedResultsController *aFetchedResultsController = [[NSFetchedResultsController alloc] initWithFetchRequest:fetchRequest managedObjectContext:managedObjectContext sectionNameKeyPath:[self sectionObject] cacheName:[self fetchObject]];
+    aFetchedResultsController.delegate = self;
+    self.fetchedResultsController = aFetchedResultsController;
+    
+    [aFetchedResultsController release];
+    [fetchRequest release];
+    [sortDescriptor release];
+    [sortDescriptors release];
+    
+    return fetchedResultsController;
+}    
+
+
+#pragma mark -
+#pragma mark Memory management
+
+- (void)didReceiveMemoryWarning {
+    [super didReceiveMemoryWarning];
+}
+
+- (void)viewDidUnload {
+}
+
+- (void)dealloc {
+    [fetchedResultsController release];
+    [managedObjectContext release];
+    [super dealloc];
+}
+
+@end
+

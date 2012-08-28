@@ -1,0 +1,13 @@
+<html>
+	<style>
+		body {
+			color: #fff;
+			background-color: #000;
+			font-family: sans-serif;
+		}
+	</style>
+	<body>
+		<p>NJ Gangs was created by John E. Jones (<a href="mailto:jonesjo@dickinson.edu">jonesjo@dickinson.edu</a>) at Dickinson College (Carlisle, PA) for his computer science senior seminar project. The App uses survey data collected by the New Jersey State Police on gang activity in the state of New Jersey.  Various law enforcement agencies in the state of New Jersey complete the gang survey which is given every three years.</p>
+		<p>Professor John MacCormick (<a href="mailto:jmac@dickinson.edu">jmac@dickinson.edu</a>) advised John Jones on this project, and Dean Baratta (<a href="mailto:dean.baratta@gmail.com">dean.baratta@gmail.com</a>) served as John's contact at the New Jersey State Police during the creation of this project.</p>
+	</body>
+</html>

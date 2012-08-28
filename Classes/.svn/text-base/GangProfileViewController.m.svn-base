@@ -1,0 +1,52 @@
+//
+//  GangProfileView.m
+//  NJ Gangs
+//
+//  Created by John Jones on 10/18/10.
+//
+
+#import "GangProfileViewController.h"
+
+
+@implementation GangProfileViewController
+
+- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil andGang:(NSManagedObject*) igangObject {
+    if ((self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil])) {
+		gangObject = igangObject;
+    }
+    return self;
+}
+
+- (void)viewDidLoad {
+    [super viewDidLoad];
+	self.navigationItem.title = [NSString stringWithFormat:@"%@",[[gangObject valueForKey:@"Name"] description]];
+}
+
+/*
+// Override to allow orientations other than the default portrait orientation.
+- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
+    // Return YES for supported orientations
+    return (interfaceOrientation == UIInterfaceOrientationPortrait);
+}
+*/
+
+- (void)didReceiveMemoryWarning {
+    // Releases the view if it doesn't have a superview.
+    [super didReceiveMemoryWarning];
+    
+    // Release any cached data, images, etc that aren't in use.
+}
+
+- (void)viewDidUnload {
+    [super viewDidUnload];
+    // Release any retained subviews of the main view.
+    // e.g. self.myOutlet = nil;
+}
+
+
+- (void)dealloc {
+    [super dealloc];
+}
+
+
+@end

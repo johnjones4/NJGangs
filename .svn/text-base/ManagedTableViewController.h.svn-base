@@ -1,0 +1,30 @@
+//
+//  ManagedTableViewController.h
+//
+//  Created by John Jones on 8/24/10.
+//
+
+#import <UIKit/UIKit.h>
+#import <CoreData/CoreData.h>
+
+@interface ManagedTableViewController : UITableViewController <NSFetchedResultsControllerDelegate> {
+    NSFetchedResultsController *fetchedResultsController;
+    NSManagedObjectContext *managedObjectContext;
+}
+
+@property (nonatomic, retain) NSFetchedResultsController *fetchedResultsController;
+@property (nonatomic, retain) NSManagedObjectContext *managedObjectContext;
+
+- (void)errored:(NSString*)message;
+- (id)initWithManagedObjectContext:(NSManagedObjectContext*)context;
+
+- (NSString*)fetchObject;
+- (NSString*)sortObject;
+- (NSString*)sectionObject;
+- (NSPredicate*)predicate;
+
+- (BOOL)direction;
+
+- (void)configureCell:(UITableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath;
+
+@end

@@ -1,0 +1,15 @@
+//
+//  CountyTableViewController.h
+//  NJ Gangs
+//
+//  Created by John Jones on 10/7/10.
+//
+
+#import <Foundation/Foundation.h>
+#import "ManagedTableViewController.h"
+
+@interface CountyTableViewController : ManagedTableViewController {
+
+}
+
+@end

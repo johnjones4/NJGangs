@@ -1,0 +1,17 @@
+//
+//  GangProfileView.h
+//  NJ Gangs
+//
+//  Created by John Jones on 10/18/10.
+//
+
+#import <UIKit/UIKit.h>
+
+
+@interface GangProfileViewController : UIViewController {
+	NSManagedObject* gangObject;
+}
+
+- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil andGang:(NSManagedObject*) igangObject;
+
+@end

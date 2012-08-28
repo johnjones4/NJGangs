@@ -1,0 +1,17 @@
+//
+//  GangTableViewController.h
+//  NJ Gangs
+//
+//  Created by John Jones on 10/8/10.
+//
+
+#import <UIKit/UIKit.h>
+#import "ManagedTableViewController.h"
+
+@interface GangTableViewController : ManagedTableViewController {
+	UIImage* alphabetical;
+	UIImage* numerical;
+	BOOL sortAlphabetical;
+}
+
+@end

@@ -1,0 +1,55 @@
+//
+//  CountyTableViewController.m
+//  NJ Gangs
+//
+//  Created by John Jones on 10/7/10.
+//
+
+#import "CountyTableViewController.h"
+#import "MunicipalityTableViewController.h"
+
+@implementation CountyTableViewController
+
+- (NSString*)fetchObject {
+	return @"County";
+}
+
+- (NSString*)sortObject {
+	return @"Name";
+}
+
+- (NSString*)sectionObject {
+	return nil;
+}
+
+- (NSPredicate*)predicate {
+	return nil;
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+	return [super tableView:tableView numberOfRowsInSection:section] + 1;
+}
+
+- (void)configureCell:(UITableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath {
+	if (indexPath.row == 0) {
+		cell.textLabel.text = @"All Counties";
+	} else {
+		NSIndexPath* path1 = [NSIndexPath indexPathForRow:indexPath.row-1 inSection:indexPath.section];
+		NSManagedObject *managedObject = [self.fetchedResultsController objectAtIndexPath:path1];
+		cell.textLabel.text = [[managedObject valueForKey:@"Name"] description];
+	}
+	cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    NSManagedObject *managedObject = nil;
+	if (indexPath.row > 0) {
+		NSIndexPath* path1 = [NSIndexPath indexPathForRow:indexPath.row-1 inSection:indexPath.section];
+		managedObject = [self.fetchedResultsController objectAtIndexPath:path1];
+	}
+	MunicipalityTableViewController* controller = [[MunicipalityTableViewController alloc] initWithManagedObjectContext:self.managedObjectContext andCounty:managedObject];
+	[self.navigationController pushViewController:controller animated:YES];
+	[self.tableView deselectRowAtIndexPath:indexPath animated:YES];
+}
+
+@end

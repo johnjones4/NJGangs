@@ -1,0 +1,17 @@
+//
+//  MunicipalitiesWithGangsTableViewController.h
+//  NJ Gangs
+//
+//  Created by John Jones on 10/18/10.
+//
+
+#import <Foundation/Foundation.h>
+#import "ManagedTableViewController.h"
+
+@interface MunicipalitiesWithGangsTableViewController : ManagedTableViewController {
+	NSManagedObject* municipality;
+}
+
+- (id)initWithMunicipality:(NSManagedObject*)iobject;
+
+@end

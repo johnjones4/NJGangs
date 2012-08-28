@@ -1,0 +1,133 @@
+//
+//  MunicipalityTableViewController.m
+//  NJ Gangs
+//
+//  Created by John Jones on 10/7/10.
+//
+
+#import "MunicipalityTableViewController.h"
+#import "MunicipalityProfileViewController.h"
+#import "MunicipalitiesWithGangsTableViewController.h"
+
+@implementation MunicipalityTableViewController
+
+@synthesize object;
+
+- (id)initWithManagedObjectContext:(NSManagedObjectContext*)context andCounty:(NSManagedObject*)iobject {
+	if (self = [super initWithManagedObjectContext:context]) {
+		self.object = iobject;
+	}
+	return self;
+}
+
+- (void)viewDidLoad {
+	sortAlphabetical = TRUE;
+    [super viewDidLoad];
+	if (self.object != nil)
+		self.navigationItem.title = [NSString stringWithFormat:@"%@ County",[[object valueForKey:@"Name"] description]];
+	else
+		self.navigationItem.title = @"All Counties";
+	alphabetical = [[UIImage alloc] initWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"sorting_alphabetical" ofType:@"png"]];
+	numerical = [[UIImage alloc] initWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"sorting_numerical" ofType:@"png"]];
+	UIBarButtonItem *sortButton = [[UIBarButtonItem alloc] initWithImage:alphabetical style:UIBarButtonItemStylePlain target:self action:@selector(toggleSort)];
+	self.navigationItem.rightBarButtonItem = sortButton;
+}
+
+- (void)toggleSort {
+	sortAlphabetical = !sortAlphabetical;
+	
+	UIBarButtonItem *sortButton = nil;
+	if (sortAlphabetical) {
+		sortButton = [[UIBarButtonItem alloc] initWithImage:alphabetical style:UIBarButtonItemStylePlain target:self action:@selector(toggleSort)];
+	} else {
+		sortButton = [[UIBarButtonItem alloc] initWithImage:numerical style:UIBarButtonItemStylePlain target:self action:@selector(toggleSort)];
+	}
+	self.navigationItem.rightBarButtonItem = sortButton;
+		
+	
+	self.fetchedResultsController = nil;
+    NSError *error = nil;
+    if (![self.fetchedResultsController performFetch:&error]) {
+        NSLog(@"Error in refetch: %@",[error localizedDescription]);
+        abort();
+    }
+	
+    [self.tableView reloadData];
+}
+
+- (NSString*)fetchObject {
+	return @"Municipality";
+}
+
+- (NSString*)sortObject {
+	if (sortAlphabetical)
+		return @"Name";
+	else
+		return @"NumGangs";
+}
+
+- (BOOL)direction {
+	return sortAlphabetical;
+}
+
+- (NSString*)sectionObject {
+	return nil;
+}
+
+- (NSPredicate*)predicate {
+	if (self.object != nil)
+		return [NSPredicate predicateWithFormat:@"County=%@",self.object];
+	else
+		return nil;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    static NSString *CellIdentifier = @"MunicCell";
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+    if (cell == nil) {
+        cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:CellIdentifier] autorelease];
+    }
+	[self configureCell:cell atIndexPath:indexPath];
+    return cell;
+}
+
+- (void)configureCell:(UITableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath {
+	NSManagedObject *managedObject = [self.fetchedResultsController objectAtIndexPath:indexPath];
+    cell.textLabel.text = [[managedObject valueForKey:@"Name"] description];
+	if ([[managedObject valueForKey:@"Gangs"] count] == 1) {
+		cell.detailTextLabel.text = @"1 Active Gang";
+		cell.textLabel.textColor = [UIColor blackColor];
+	} else if ([[managedObject valueForKey:@"Gangs"] count] > 0) {
+		cell.detailTextLabel.text = [NSString stringWithFormat:@"%i Active Gangs",[[managedObject valueForKey:@"Gangs"] count]];
+		cell.textLabel.textColor = [UIColor blackColor];
+	} else {
+		cell.detailTextLabel.text = [NSString stringWithFormat:@"Gang Activity Detail Unavailable",[[managedObject valueForKey:@"Gangs"] count]];
+		cell.textLabel.textColor = [UIColor grayColor];
+	}
+	cell.accessoryType = UITableViewCellAccessoryDetailDisclosureButton;
+}
+
+- (void)tableView:(UITableView *)tableView accessoryButtonTappedForRowWithIndexPath:(NSIndexPath *)indexPath {
+	NSManagedObject *managedObject = [self.fetchedResultsController objectAtIndexPath:indexPath];
+	MunicipalityProfileViewController* profile = [[MunicipalityProfileViewController alloc] initWithNibName:@"MunicipalityProfileViewController" bundle:nil andMunicipality:managedObject];
+	[self.navigationController pushViewController:profile animated:YES];
+}
+
+- (NSIndexPath *)tableView:(UITableView *)tableView willSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+	NSManagedObject *managedObject = [self.fetchedResultsController objectAtIndexPath:indexPath];
+	if ([[managedObject valueForKey:@"Gangs"] count] > 0) 
+		return indexPath;
+	else 
+		return nil;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+	NSManagedObject *managedObject = [self.fetchedResultsController objectAtIndexPath:indexPath];
+	if ([[managedObject valueForKey:@"Gangs"] count] > 0) {
+		MunicipalitiesWithGangsTableViewController *controller = [[MunicipalitiesWithGangsTableViewController alloc] initWithMunicipality:managedObject];
+		[self.navigationController pushViewController:controller animated:YES];
+	}
+	[self.tableView deselectRowAtIndexPath:indexPath animated:YES];
+}
+
+@end

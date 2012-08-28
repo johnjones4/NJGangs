@@ -1,0 +1,131 @@
+K 25
+svn:wc:ra_dav:version-url
+V 35
+/main/!svn/ver/4/NJ%20Gangs/Classes
+END
+NJ_GangsAppDelegate.h
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/main/!svn/ver/13/NJ%20Gangs/Classes/NJ_GangsAppDelegate.h
+END
+NJ_GangsAppDelegate.m
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/main/!svn/ver/13/NJ%20Gangs/Classes/NJ_GangsAppDelegate.m
+END
+MunicipalityProfileViewController.h
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/main/!svn/ver/13/NJ%20Gangs/Classes/MunicipalityProfileViewController.h
+END
+GangsWithMunicipalitiesTableViewController.h
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/main/!svn/ver/13/NJ%20Gangs/Classes/GangsWithMunicipalitiesTableViewController.h
+END
+InfoViewController.h
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/main/!svn/ver/13/NJ%20Gangs/Classes/InfoViewController.h
+END
+MunicipalitiesWithGangsTableViewController.h
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/main/!svn/ver/13/NJ%20Gangs/Classes/MunicipalitiesWithGangsTableViewController.h
+END
+MunicipalityProfileViewController.m
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/main/!svn/ver/13/NJ%20Gangs/Classes/MunicipalityProfileViewController.m
+END
+MunicipalityTableViewController.h
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/main/!svn/ver/13/NJ%20Gangs/Classes/MunicipalityTableViewController.h
+END
+Gang.h
+K 25
+svn:wc:ra_dav:version-url
+V 43
+/main/!svn/ver/13/NJ%20Gangs/Classes/Gang.h
+END
+GangsWithMunicipalitiesTableViewController.m
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/main/!svn/ver/13/NJ%20Gangs/Classes/GangsWithMunicipalitiesTableViewController.m
+END
+InfoViewController.m
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/main/!svn/ver/13/NJ%20Gangs/Classes/InfoViewController.m
+END
+MunicipalitiesWithGangsTableViewController.m
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/main/!svn/ver/13/NJ%20Gangs/Classes/MunicipalitiesWithGangsTableViewController.m
+END
+MunicipalityProfileViewController.xib
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/main/!svn/ver/13/NJ%20Gangs/Classes/MunicipalityProfileViewController.xib
+END
+GangProfileViewController.h
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/main/!svn/ver/13/NJ%20Gangs/Classes/GangProfileViewController.h
+END
+MunicipalityTableViewController.m
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/main/!svn/ver/13/NJ%20Gangs/Classes/MunicipalityTableViewController.m
+END
+Gang.m
+K 25
+svn:wc:ra_dav:version-url
+V 43
+/main/!svn/ver/13/NJ%20Gangs/Classes/Gang.m
+END
+InfoViewController.xib
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/main/!svn/ver/13/NJ%20Gangs/Classes/InfoViewController.xib
+END
+GangProfileViewController.m
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/main/!svn/ver/13/NJ%20Gangs/Classes/GangProfileViewController.m
+END
+GangTableViewController.h
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/main/!svn/ver/13/NJ%20Gangs/Classes/GangTableViewController.h
+END
+GangProfileViewController.xib
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/main/!svn/ver/13/NJ%20Gangs/Classes/GangProfileViewController.xib
+END
+GangTableViewController.m
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/main/!svn/ver/13/NJ%20Gangs/Classes/GangTableViewController.m
+END

@@ -1,0 +1,560 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 45;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1D3623260D0F684500981E51 /* NJ_GangsAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D3623250D0F684500981E51 /* NJ_GangsAppDelegate.m */; };
+		1D60589B0D05DD56006BFB54 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; };
+		1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D30AB110D05D00D00671497 /* Foundation.framework */; };
+		1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DF5F4DF0D08C38300B7A737 /* UIKit.framework */; };
+		28860BE50F44EE6400985440 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28860BE40F44EE6400985440 /* CoreData.framework */; };
+		2892E4100DC94CBA00A64D0F /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2892E40F0DC94CBA00A64D0F /* CoreGraphics.framework */; };
+		28AD73600D9D9599002E5188 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28AD735F0D9D9599002E5188 /* MainWindow.xib */; };
+		28D3F202112F7DC200FD0661 /* NJ_Gangs.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 28D3F201112F7DC200FD0661 /* NJ_Gangs.xcdatamodeld */; };
+		AF063D84137AD08F0075E5D0 /* BarView.m in Sources */ = {isa = PBXBuildFile; fileRef = AF063D83137AD08F0075E5D0 /* BarView.m */; };
+		AF0B4EBD125EB5CA003BF0A1 /* ManagedTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF0B4EBC125EB5CA003BF0A1 /* ManagedTableViewController.m */; };
+		AF0B4EC9125EB643003BF0A1 /* CountyTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF0B4EC8125EB643003BF0A1 /* CountyTableViewController.m */; };
+		AF0B4F4B125EC884003BF0A1 /* MunicipalityTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF0B4F4A125EC884003BF0A1 /* MunicipalityTableViewController.m */; };
+		AF0B4F94125ECE2F003BF0A1 /* MunicipalityProfileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AF0B4F92125ECE2F003BF0A1 /* MunicipalityProfileViewController.xib */; };
+		AF13BC411333C550002E306A /* TallyMapItemPair.m in Sources */ = {isa = PBXBuildFile; fileRef = AF13BC401333C550002E306A /* TallyMapItemPair.m */; };
+		AF13BCA21333D84A002E306A /* Municipality.m in Sources */ = {isa = PBXBuildFile; fileRef = AF13BCA11333D84A002E306A /* Municipality.m */; };
+		AF13BCD513340065002E306A /* ProfileMap.m in Sources */ = {isa = PBXBuildFile; fileRef = AF13BCD313340065002E306A /* ProfileMap.m */; };
+		AF13BCD613340065002E306A /* ProfileMap.xib in Resources */ = {isa = PBXBuildFile; fileRef = AF13BCD413340065002E306A /* ProfileMap.xib */; };
+		AF13BD3613340644002E306A /* ProfileMapAnnotations.m in Sources */ = {isa = PBXBuildFile; fileRef = AF13BD3513340644002E306A /* ProfileMapAnnotations.m */; };
+		AF1A17DF125F9F420003ECC9 /* GangTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF1A17DD125F9F420003ECC9 /* GangTableViewController.m */; };
+		AF1A17FA125FA0210003ECC9 /* InfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF1A17F8125FA0210003ECC9 /* InfoViewController.m */; };
+		AF1A17FB125FA0210003ECC9 /* InfoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AF1A17F9125FA0210003ECC9 /* InfoViewController.xib */; };
+		AF2A45A7126CC6FE0068B45A /* GangsWithMunicipalitiesTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF2A45A6126CC6FE0068B45A /* GangsWithMunicipalitiesTableViewController.m */; };
+		AF2A461D126CD88F0068B45A /* gangsicon.png in Resources */ = {isa = PBXBuildFile; fileRef = AF2A461C126CD88F0068B45A /* gangsicon.png */; };
+		AF2A4622126CDA7F0068B45A /* countyicon.png in Resources */ = {isa = PBXBuildFile; fileRef = AF2A4621126CDA7F0068B45A /* countyicon.png */; };
+		AF2A4631126CDC590068B45A /* iconinfo.png in Resources */ = {isa = PBXBuildFile; fileRef = AF2A4630126CDC590068B45A /* iconinfo.png */; };
+		AF2A4664126CE4000068B45A /* iconlarge.png in Resources */ = {isa = PBXBuildFile; fileRef = AF2A4663126CE4000068B45A /* iconlarge.png */; };
+		AF3684291332AE3E00AFAE11 /* TallyMap.m in Sources */ = {isa = PBXBuildFile; fileRef = AF3684281332AE3E00AFAE11 /* TallyMap.m */; };
+		AF4233251332845F00E01325 /* Gang.m in Sources */ = {isa = PBXBuildFile; fileRef = AF4233241332845F00E01325 /* Gang.m */; };
+		AF42334313328C2600E01325 /* GangData.m in Sources */ = {isa = PBXBuildFile; fileRef = AF42334213328C2600E01325 /* GangData.m */; };
+		AF4D5F7212AC0C3D00A82DB9 /* NJGangsColors.m in Sources */ = {isa = PBXBuildFile; fileRef = AF4D5F7112AC0C3D00A82DB9 /* NJGangsColors.m */; };
+		AF4D5FA212AC0DC300A82DB9 /* info1.html in Resources */ = {isa = PBXBuildFile; fileRef = AF4D5FA112AC0DC300A82DB9 /* info1.html */; };
+		AF50E5DA13359EAB00E03918 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF50E5D913359EAB00E03918 /* MessageUI.framework */; };
+		AF50E5E513359EDA00E03918 /* ProfileHTMLConverter.m in Sources */ = {isa = PBXBuildFile; fileRef = AF50E5E413359EDA00E03918 /* ProfileHTMLConverter.m */; };
+		AF60CCBF13DD19F6005F553A /* icon1.png in Resources */ = {isa = PBXBuildFile; fileRef = AF60CCBE13DD19F5005F553A /* icon1.png */; };
+		AF6A206D125196F800696864 /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = AF6A206C125196F800696864 /* icon.png */; };
+		AF73225C126CADE0007896C4 /* GangProfileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AF73225A126CADE0007896C4 /* GangProfileViewController.xib */; };
+		AF73228A126CAFBF007896C4 /* MunicipalitiesWithGangsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF732289126CAFBF007896C4 /* MunicipalitiesWithGangsTableViewController.m */; };
+		AF82C9C1129225EC00966F91 /* sorting_alphabetical.png in Resources */ = {isa = PBXBuildFile; fileRef = AF82C9BF129225EC00966F91 /* sorting_alphabetical.png */; };
+		AF82C9C2129225EC00966F91 /* sorting_numerical.png in Resources */ = {isa = PBXBuildFile; fileRef = AF82C9C0129225EC00966F91 /* sorting_numerical.png */; };
+		AF9054DD125EDB2700659980 /* base.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = AF9054DC125EDB2700659980 /* base.sqlite */; };
+		AFAA4A9B130DF94500071284 /* ProfileItem.m in Sources */ = {isa = PBXBuildFile; fileRef = AFAA4A9A130DF94500071284 /* ProfileItem.m */; };
+		AFAA4AAD130DFB7D00071284 /* ProfileCellView.m in Sources */ = {isa = PBXBuildFile; fileRef = AFAA4AAB130DFB7D00071284 /* ProfileCellView.m */; };
+		AFAA4AAE130DFB7D00071284 /* ProfileCellView.xib in Resources */ = {isa = PBXBuildFile; fileRef = AFAA4AAC130DFB7D00071284 /* ProfileCellView.xib */; };
+		AFAEF0931293A00A00CB4E95 /* disclose.png in Resources */ = {isa = PBXBuildFile; fileRef = AFAEF0921293A00A00CB4E95 /* disclose.png */; };
+		AFAEF0F21294385600CB4E95 /* ResortableTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AFAEF0F11294385600CB4E95 /* ResortableTableViewController.m */; };
+		AFEFC5B512BE9FA30091C3AD /* RegionFinder.m in Sources */ = {isa = PBXBuildFile; fileRef = AFEFC5B412BE9FA30091C3AD /* RegionFinder.m */; };
+		AFEFC5E012BEB85A0091C3AD /* County.m in Sources */ = {isa = PBXBuildFile; fileRef = AFEFC5DF12BEB85A0091C3AD /* County.m */; };
+		AFEFC5F512BEEFE40091C3AD /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AFEFC5F412BEEFE40091C3AD /* CoreLocation.framework */; };
+		AFEFC6C412BF152A0091C3AD /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AFEFC6C312BF152A0091C3AD /* MapKit.framework */; };
+		AFEFC76112C017B00091C3AD /* ProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AFEFC76012C017B00091C3AD /* ProfileViewController.m */; };
+		AFEFC7A812C037F40091C3AD /* ProfileableGang.m in Sources */ = {isa = PBXBuildFile; fileRef = AFEFC7A712C037F40091C3AD /* ProfileableGang.m */; };
+		AFEFC7E112C03A350091C3AD /* ProfilableMunicipality.m in Sources */ = {isa = PBXBuildFile; fileRef = AFEFC7E012C03A350091C3AD /* ProfilableMunicipality.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		1D30AB110D05D00D00671497 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		1D3623240D0F684500981E51 /* NJ_GangsAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NJ_GangsAppDelegate.h; sourceTree = "<group>"; };
+		1D3623250D0F684500981E51 /* NJ_GangsAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NJ_GangsAppDelegate.m; sourceTree = "<group>"; };
+		1D6058910D05DD3D006BFB54 /* NJ Gangs.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "NJ Gangs.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1DF5F4DF0D08C38300B7A737 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		28860B760F44E54D00985440 /* NJ_Gangs.xcdatamodel */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = wrapper.xcdatamodel; path = NJ_Gangs.xcdatamodel; sourceTree = "<group>"; };
+		28860BE40F44EE6400985440 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		2892E40F0DC94CBA00A64D0F /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		28A0AAE50D9B0CCF005BE974 /* NJ_Gangs_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NJ_Gangs_Prefix.pch; sourceTree = "<group>"; };
+		28AD735F0D9D9599002E5188 /* MainWindow.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainWindow.xib; sourceTree = "<group>"; };
+		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		8D1107310486CEB800E47090 /* NJ_Gangs-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "NJ_Gangs-Info.plist"; plistStructureDefinitionIdentifier = "com.apple.xcode.plist.structure-definition.iphone.info-plist"; sourceTree = "<group>"; };
+		AF063D82137AD08F0075E5D0 /* BarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BarView.h; sourceTree = "<group>"; };
+		AF063D83137AD08F0075E5D0 /* BarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BarView.m; sourceTree = "<group>"; };
+		AF0B4EBB125EB5CA003BF0A1 /* ManagedTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ManagedTableViewController.h; path = ../ManagedTableViewController.h; sourceTree = "<group>"; };
+		AF0B4EBC125EB5CA003BF0A1 /* ManagedTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ManagedTableViewController.m; path = ../ManagedTableViewController.m; sourceTree = "<group>"; };
+		AF0B4EC7125EB643003BF0A1 /* CountyTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CountyTableViewController.h; path = ../CountyTableViewController.h; sourceTree = "<group>"; };
+		AF0B4EC8125EB643003BF0A1 /* CountyTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CountyTableViewController.m; path = ../CountyTableViewController.m; sourceTree = "<group>"; };
+		AF0B4F49125EC884003BF0A1 /* MunicipalityTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MunicipalityTableViewController.h; sourceTree = "<group>"; };
+		AF0B4F4A125EC884003BF0A1 /* MunicipalityTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MunicipalityTableViewController.m; sourceTree = "<group>"; };
+		AF0B4F92125ECE2F003BF0A1 /* MunicipalityProfileViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = MunicipalityProfileViewController.xib; path = Classes/MunicipalityProfileViewController.xib; sourceTree = "<group>"; };
+		AF13BC3F1333C550002E306A /* TallyMapItemPair.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TallyMapItemPair.h; sourceTree = "<group>"; };
+		AF13BC401333C550002E306A /* TallyMapItemPair.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TallyMapItemPair.m; sourceTree = "<group>"; };
+		AF13BCA01333D84A002E306A /* Municipality.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Municipality.h; sourceTree = "<group>"; };
+		AF13BCA11333D84A002E306A /* Municipality.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Municipality.m; sourceTree = "<group>"; };
+		AF13BCD213340065002E306A /* ProfileMap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProfileMap.h; sourceTree = "<group>"; };
+		AF13BCD313340065002E306A /* ProfileMap.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProfileMap.m; sourceTree = "<group>"; };
+		AF13BCD413340065002E306A /* ProfileMap.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileMap.xib; sourceTree = "<group>"; };
+		AF13BD3413340644002E306A /* ProfileMapAnnotations.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProfileMapAnnotations.h; sourceTree = "<group>"; };
+		AF13BD3513340644002E306A /* ProfileMapAnnotations.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProfileMapAnnotations.m; sourceTree = "<group>"; };
+		AF1A17DC125F9F420003ECC9 /* GangTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GangTableViewController.h; sourceTree = "<group>"; };
+		AF1A17DD125F9F420003ECC9 /* GangTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GangTableViewController.m; sourceTree = "<group>"; };
+		AF1A17F7125FA0210003ECC9 /* InfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InfoViewController.h; sourceTree = "<group>"; };
+		AF1A17F8125FA0210003ECC9 /* InfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InfoViewController.m; sourceTree = "<group>"; };
+		AF1A17F9125FA0210003ECC9 /* InfoViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = InfoViewController.xib; path = Classes/InfoViewController.xib; sourceTree = "<group>"; };
+		AF2A45A5126CC6FE0068B45A /* GangsWithMunicipalitiesTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GangsWithMunicipalitiesTableViewController.h; sourceTree = "<group>"; };
+		AF2A45A6126CC6FE0068B45A /* GangsWithMunicipalitiesTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GangsWithMunicipalitiesTableViewController.m; sourceTree = "<group>"; };
+		AF2A461C126CD88F0068B45A /* gangsicon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = gangsicon.png; sourceTree = "<group>"; };
+		AF2A4621126CDA7F0068B45A /* countyicon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = countyicon.png; sourceTree = "<group>"; };
+		AF2A4630126CDC590068B45A /* iconinfo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iconinfo.png; sourceTree = "<group>"; };
+		AF2A4663126CE4000068B45A /* iconlarge.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iconlarge.png; sourceTree = "<group>"; };
+		AF3684271332AE3E00AFAE11 /* TallyMap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TallyMap.h; sourceTree = "<group>"; };
+		AF3684281332AE3E00AFAE11 /* TallyMap.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TallyMap.m; sourceTree = "<group>"; };
+		AF4233231332845F00E01325 /* Gang.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Gang.h; sourceTree = "<group>"; };
+		AF4233241332845F00E01325 /* Gang.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Gang.m; sourceTree = "<group>"; };
+		AF42334113328C2600E01325 /* GangData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GangData.h; sourceTree = "<group>"; };
+		AF42334213328C2600E01325 /* GangData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GangData.m; sourceTree = "<group>"; };
+		AF4D5F7012AC0C3D00A82DB9 /* NJGangsColors.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NJGangsColors.h; sourceTree = "<group>"; };
+		AF4D5F7112AC0C3D00A82DB9 /* NJGangsColors.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NJGangsColors.m; sourceTree = "<group>"; };
+		AF4D5FA112AC0DC300A82DB9 /* info1.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = info1.html; sourceTree = "<group>"; };
+		AF50E5D913359EAB00E03918 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
+		AF50E5E313359EDA00E03918 /* ProfileHTMLConverter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProfileHTMLConverter.h; sourceTree = "<group>"; };
+		AF50E5E413359EDA00E03918 /* ProfileHTMLConverter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProfileHTMLConverter.m; sourceTree = "<group>"; };
+		AF60CCBE13DD19F5005F553A /* icon1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon1.png; sourceTree = "<group>"; };
+		AF6A206C125196F800696864 /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
+		AF73225A126CADE0007896C4 /* GangProfileViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = GangProfileViewController.xib; path = Classes/GangProfileViewController.xib; sourceTree = "<group>"; };
+		AF732288126CAFBF007896C4 /* MunicipalitiesWithGangsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MunicipalitiesWithGangsTableViewController.h; sourceTree = "<group>"; };
+		AF732289126CAFBF007896C4 /* MunicipalitiesWithGangsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MunicipalitiesWithGangsTableViewController.m; sourceTree = "<group>"; };
+		AF82C9BF129225EC00966F91 /* sorting_alphabetical.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sorting_alphabetical.png; sourceTree = "<group>"; };
+		AF82C9C0129225EC00966F91 /* sorting_numerical.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sorting_numerical.png; sourceTree = "<group>"; };
+		AF9054DC125EDB2700659980 /* base.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = base.sqlite; sourceTree = "<group>"; };
+		AFAA4A99130DF94500071284 /* ProfileItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProfileItem.h; sourceTree = "<group>"; };
+		AFAA4A9A130DF94500071284 /* ProfileItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProfileItem.m; sourceTree = "<group>"; };
+		AFAA4AAA130DFB7D00071284 /* ProfileCellView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProfileCellView.h; sourceTree = "<group>"; };
+		AFAA4AAB130DFB7D00071284 /* ProfileCellView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProfileCellView.m; sourceTree = "<group>"; };
+		AFAA4AAC130DFB7D00071284 /* ProfileCellView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileCellView.xib; sourceTree = "<group>"; };
+		AFAEF0921293A00A00CB4E95 /* disclose.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = disclose.png; sourceTree = "<group>"; };
+		AFAEF0F01294385600CB4E95 /* ResortableTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResortableTableViewController.h; sourceTree = "<group>"; };
+		AFAEF0F11294385600CB4E95 /* ResortableTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ResortableTableViewController.m; sourceTree = "<group>"; };
+		AFEFC5B312BE9FA30091C3AD /* RegionFinder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegionFinder.h; sourceTree = "<group>"; };
+		AFEFC5B412BE9FA30091C3AD /* RegionFinder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegionFinder.m; sourceTree = "<group>"; };
+		AFEFC5DE12BEB85A0091C3AD /* County.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = County.h; sourceTree = "<group>"; };
+		AFEFC5DF12BEB85A0091C3AD /* County.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = County.m; sourceTree = "<group>"; };
+		AFEFC5F412BEEFE40091C3AD /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		AFEFC6C312BF152A0091C3AD /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		AFEFC75F12C017B00091C3AD /* ProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProfileViewController.h; sourceTree = "<group>"; };
+		AFEFC76012C017B00091C3AD /* ProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProfileViewController.m; sourceTree = "<group>"; };
+		AFEFC77812C032CF0091C3AD /* Profilable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Profilable.h; sourceTree = "<group>"; };
+		AFEFC7A612C037F40091C3AD /* ProfileableGang.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProfileableGang.h; sourceTree = "<group>"; };
+		AFEFC7A712C037F40091C3AD /* ProfileableGang.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProfileableGang.m; sourceTree = "<group>"; };
+		AFEFC7DF12C03A350091C3AD /* ProfilableMunicipality.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProfilableMunicipality.h; sourceTree = "<group>"; };
+		AFEFC7E012C03A350091C3AD /* ProfilableMunicipality.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProfilableMunicipality.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1D60588F0D05DD3D006BFB54 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */,
+				1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */,
+				2892E4100DC94CBA00A64D0F /* CoreGraphics.framework in Frameworks */,
+				28860BE50F44EE6400985440 /* CoreData.framework in Frameworks */,
+				AFEFC5F512BEEFE40091C3AD /* CoreLocation.framework in Frameworks */,
+				AFEFC6C412BF152A0091C3AD /* MapKit.framework in Frameworks */,
+				AF50E5DA13359EAB00E03918 /* MessageUI.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		080E96DDFE201D6D7F000001 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				AF73228F126CB030007896C4 /* OtherClasses */,
+				AF73228C126CAFE6007896C4 /* Gang_Drilldown */,
+				AF73228D126CAFEF007896C4 /* County_Drilldown */,
+				19C28FACFE9D520D11CA2CBB /* Profiles */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		19C28FACFE9D520D11CA2CBB /* Profiles */ = {
+			isa = PBXGroup;
+			children = (
+				AF13BD3713340648002E306A /* mapping */,
+				AFEFC75F12C017B00091C3AD /* ProfileViewController.h */,
+				AFEFC76012C017B00091C3AD /* ProfileViewController.m */,
+				AFEFC77812C032CF0091C3AD /* Profilable.h */,
+				AFEFC7A612C037F40091C3AD /* ProfileableGang.h */,
+				AFEFC7A712C037F40091C3AD /* ProfileableGang.m */,
+				AFEFC7DF12C03A350091C3AD /* ProfilableMunicipality.h */,
+				AFEFC7E012C03A350091C3AD /* ProfilableMunicipality.m */,
+				AFAA4A99130DF94500071284 /* ProfileItem.h */,
+				AFAA4A9A130DF94500071284 /* ProfileItem.m */,
+				AFAA4AAA130DFB7D00071284 /* ProfileCellView.h */,
+				AFAA4AAB130DFB7D00071284 /* ProfileCellView.m */,
+				AF50E5E313359EDA00E03918 /* ProfileHTMLConverter.h */,
+				AF50E5E413359EDA00E03918 /* ProfileHTMLConverter.m */,
+				AF063D82137AD08F0075E5D0 /* BarView.h */,
+				AF063D83137AD08F0075E5D0 /* BarView.m */,
+			);
+			name = Profiles;
+			path = ..;
+			sourceTree = "<group>";
+		};
+		29B97314FDCFA39411CA2CEA /* CustomTemplate */ = {
+			isa = PBXGroup;
+			children = (
+				AF60CCBE13DD19F5005F553A /* icon1.png */,
+				080E96DDFE201D6D7F000001 /* Classes */,
+				29B97315FDCFA39411CA2CEA /* Other Sources */,
+				29B97317FDCFA39411CA2CEA /* Resources */,
+				29B97323FDCFA39411CA2CEA /* Frameworks */,
+			);
+			name = CustomTemplate;
+			sourceTree = "<group>";
+		};
+		29B97315FDCFA39411CA2CEA /* Other Sources */ = {
+			isa = PBXGroup;
+			children = (
+				AF4D5FA112AC0DC300A82DB9 /* info1.html */,
+				28A0AAE50D9B0CCF005BE974 /* NJ_Gangs_Prefix.pch */,
+				29B97316FDCFA39411CA2CEA /* main.m */,
+			);
+			name = "Other Sources";
+			sourceTree = "<group>";
+		};
+		29B97317FDCFA39411CA2CEA /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				1D6058910D05DD3D006BFB54 /* NJ Gangs.app */,
+				AF2A463E126CDE3B0068B45A /* CoreData */,
+				AF2A463D126CDE2E0068B45A /* NIBS */,
+				AF2A463C126CDE150068B45A /* images */,
+				8D1107310486CEB800E47090 /* NJ_Gangs-Info.plist */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				AF50E5D913359EAB00E03918 /* MessageUI.framework */,
+				AFEFC6C312BF152A0091C3AD /* MapKit.framework */,
+				AFEFC5F412BEEFE40091C3AD /* CoreLocation.framework */,
+				1DF5F4DF0D08C38300B7A737 /* UIKit.framework */,
+				1D30AB110D05D00D00671497 /* Foundation.framework */,
+				2892E40F0DC94CBA00A64D0F /* CoreGraphics.framework */,
+				28860BE40F44EE6400985440 /* CoreData.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		AF13BD3713340648002E306A /* mapping */ = {
+			isa = PBXGroup;
+			children = (
+				AF13BCD213340065002E306A /* ProfileMap.h */,
+				AF13BCD313340065002E306A /* ProfileMap.m */,
+				AF13BD3413340644002E306A /* ProfileMapAnnotations.h */,
+				AF13BD3513340644002E306A /* ProfileMapAnnotations.m */,
+			);
+			name = mapping;
+			sourceTree = "<group>";
+		};
+		AF2A463C126CDE150068B45A /* images */ = {
+			isa = PBXGroup;
+			children = (
+				AFAEF0921293A00A00CB4E95 /* disclose.png */,
+				AF82C9BF129225EC00966F91 /* sorting_alphabetical.png */,
+				AF82C9C0129225EC00966F91 /* sorting_numerical.png */,
+				AF2A4663126CE4000068B45A /* iconlarge.png */,
+				AF6A206C125196F800696864 /* icon.png */,
+				AF2A4630126CDC590068B45A /* iconinfo.png */,
+				AF2A4621126CDA7F0068B45A /* countyicon.png */,
+				AF2A461C126CD88F0068B45A /* gangsicon.png */,
+			);
+			name = images;
+			sourceTree = "<group>";
+		};
+		AF2A463D126CDE2E0068B45A /* NIBS */ = {
+			isa = PBXGroup;
+			children = (
+				AF1A17F9125FA0210003ECC9 /* InfoViewController.xib */,
+				AF0B4F92125ECE2F003BF0A1 /* MunicipalityProfileViewController.xib */,
+				AF73225A126CADE0007896C4 /* GangProfileViewController.xib */,
+				28AD735F0D9D9599002E5188 /* MainWindow.xib */,
+				AFAA4AAC130DFB7D00071284 /* ProfileCellView.xib */,
+				AF13BCD413340065002E306A /* ProfileMap.xib */,
+			);
+			name = NIBS;
+			sourceTree = "<group>";
+		};
+		AF2A463E126CDE3B0068B45A /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				28D3F201112F7DC200FD0661 /* NJ_Gangs.xcdatamodeld */,
+				AF9054DC125EDB2700659980 /* base.sqlite */,
+			);
+			name = CoreData;
+			sourceTree = "<group>";
+		};
+		AF73228C126CAFE6007896C4 /* Gang_Drilldown */ = {
+			isa = PBXGroup;
+			children = (
+				AF1A17DC125F9F420003ECC9 /* GangTableViewController.h */,
+				AF1A17DD125F9F420003ECC9 /* GangTableViewController.m */,
+				AF2A45A5126CC6FE0068B45A /* GangsWithMunicipalitiesTableViewController.h */,
+				AF2A45A6126CC6FE0068B45A /* GangsWithMunicipalitiesTableViewController.m */,
+			);
+			name = Gang_Drilldown;
+			sourceTree = "<group>";
+		};
+		AF73228D126CAFEF007896C4 /* County_Drilldown */ = {
+			isa = PBXGroup;
+			children = (
+				AF0B4EC7125EB643003BF0A1 /* CountyTableViewController.h */,
+				AF0B4EC8125EB643003BF0A1 /* CountyTableViewController.m */,
+				AF0B4F49125EC884003BF0A1 /* MunicipalityTableViewController.h */,
+				AF0B4F4A125EC884003BF0A1 /* MunicipalityTableViewController.m */,
+				AF732288126CAFBF007896C4 /* MunicipalitiesWithGangsTableViewController.h */,
+				AF732289126CAFBF007896C4 /* MunicipalitiesWithGangsTableViewController.m */,
+			);
+			name = County_Drilldown;
+			sourceTree = "<group>";
+		};
+		AF73228F126CB030007896C4 /* OtherClasses */ = {
+			isa = PBXGroup;
+			children = (
+				AF4D5F7012AC0C3D00A82DB9 /* NJGangsColors.h */,
+				AF4D5F7112AC0C3D00A82DB9 /* NJGangsColors.m */,
+				AF0B4EBB125EB5CA003BF0A1 /* ManagedTableViewController.h */,
+				AF0B4EBC125EB5CA003BF0A1 /* ManagedTableViewController.m */,
+				AFAEF0F01294385600CB4E95 /* ResortableTableViewController.h */,
+				AFAEF0F11294385600CB4E95 /* ResortableTableViewController.m */,
+				1D3623240D0F684500981E51 /* NJ_GangsAppDelegate.h */,
+				1D3623250D0F684500981E51 /* NJ_GangsAppDelegate.m */,
+				AF1A17F7125FA0210003ECC9 /* InfoViewController.h */,
+				AF1A17F8125FA0210003ECC9 /* InfoViewController.m */,
+				AFEFC5B312BE9FA30091C3AD /* RegionFinder.h */,
+				AFEFC5B412BE9FA30091C3AD /* RegionFinder.m */,
+				AF42334113328C2600E01325 /* GangData.h */,
+				AF42334213328C2600E01325 /* GangData.m */,
+				AF3684271332AE3E00AFAE11 /* TallyMap.h */,
+				AF3684281332AE3E00AFAE11 /* TallyMap.m */,
+				AF13BC3F1333C550002E306A /* TallyMapItemPair.h */,
+				AF13BC401333C550002E306A /* TallyMapItemPair.m */,
+			);
+			name = OtherClasses;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		1D6058900D05DD3D006BFB54 /* NJ Gangs */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1D6058960D05DD3E006BFB54 /* Build configuration list for PBXNativeTarget "NJ Gangs" */;
+			buildPhases = (
+				1D60588D0D05DD3D006BFB54 /* Resources */,
+				1D60588E0D05DD3D006BFB54 /* Sources */,
+				1D60588F0D05DD3D006BFB54 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "NJ Gangs";
+			productName = "NJ Gangs";
+			productReference = 1D6058910D05DD3D006BFB54 /* NJ Gangs.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		29B97313FDCFA39411CA2CEA /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = C01FCF4E08A954540054247B /* Build configuration list for PBXProject "NJ Gangs" */;
+			compatibilityVersion = "Xcode 3.1";
+			developmentRegion = English;
+			hasScannedForEncodings = 1;
+			knownRegions = (
+				English,
+				Japanese,
+				French,
+				German,
+				en,
+			);
+			mainGroup = 29B97314FDCFA39411CA2CEA /* CustomTemplate */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				1D6058900D05DD3D006BFB54 /* NJ Gangs */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1D60588D0D05DD3D006BFB54 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				28AD73600D9D9599002E5188 /* MainWindow.xib in Resources */,
+				AF6A206D125196F800696864 /* icon.png in Resources */,
+				AF0B4F94125ECE2F003BF0A1 /* MunicipalityProfileViewController.xib in Resources */,
+				AF9054DD125EDB2700659980 /* base.sqlite in Resources */,
+				AF1A17FB125FA0210003ECC9 /* InfoViewController.xib in Resources */,
+				AF73225C126CADE0007896C4 /* GangProfileViewController.xib in Resources */,
+				AF2A461D126CD88F0068B45A /* gangsicon.png in Resources */,
+				AF2A4622126CDA7F0068B45A /* countyicon.png in Resources */,
+				AF2A4631126CDC590068B45A /* iconinfo.png in Resources */,
+				AF2A4664126CE4000068B45A /* iconlarge.png in Resources */,
+				AF82C9C1129225EC00966F91 /* sorting_alphabetical.png in Resources */,
+				AF82C9C2129225EC00966F91 /* sorting_numerical.png in Resources */,
+				AFAEF0931293A00A00CB4E95 /* disclose.png in Resources */,
+				AF4D5FA212AC0DC300A82DB9 /* info1.html in Resources */,
+				AFAA4AAE130DFB7D00071284 /* ProfileCellView.xib in Resources */,
+				AF13BCD613340065002E306A /* ProfileMap.xib in Resources */,
+				AF60CCBF13DD19F6005F553A /* icon1.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1D60588E0D05DD3D006BFB54 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1D60589B0D05DD56006BFB54 /* main.m in Sources */,
+				1D3623260D0F684500981E51 /* NJ_GangsAppDelegate.m in Sources */,
+				28D3F202112F7DC200FD0661 /* NJ_Gangs.xcdatamodeld in Sources */,
+				AF0B4EBD125EB5CA003BF0A1 /* ManagedTableViewController.m in Sources */,
+				AF0B4EC9125EB643003BF0A1 /* CountyTableViewController.m in Sources */,
+				AF0B4F4B125EC884003BF0A1 /* MunicipalityTableViewController.m in Sources */,
+				AF1A17DF125F9F420003ECC9 /* GangTableViewController.m in Sources */,
+				AF1A17FA125FA0210003ECC9 /* InfoViewController.m in Sources */,
+				AF73228A126CAFBF007896C4 /* MunicipalitiesWithGangsTableViewController.m in Sources */,
+				AF2A45A7126CC6FE0068B45A /* GangsWithMunicipalitiesTableViewController.m in Sources */,
+				AFAEF0F21294385600CB4E95 /* ResortableTableViewController.m in Sources */,
+				AF4D5F7212AC0C3D00A82DB9 /* NJGangsColors.m in Sources */,
+				AFEFC5B512BE9FA30091C3AD /* RegionFinder.m in Sources */,
+				AFEFC5E012BEB85A0091C3AD /* County.m in Sources */,
+				AFEFC76112C017B00091C3AD /* ProfileViewController.m in Sources */,
+				AFEFC7A812C037F40091C3AD /* ProfileableGang.m in Sources */,
+				AFEFC7E112C03A350091C3AD /* ProfilableMunicipality.m in Sources */,
+				AFAA4A9B130DF94500071284 /* ProfileItem.m in Sources */,
+				AFAA4AAD130DFB7D00071284 /* ProfileCellView.m in Sources */,
+				AF4233251332845F00E01325 /* Gang.m in Sources */,
+				AF42334313328C2600E01325 /* GangData.m in Sources */,
+				AF3684291332AE3E00AFAE11 /* TallyMap.m in Sources */,
+				AF13BC411333C550002E306A /* TallyMapItemPair.m in Sources */,
+				AF13BCA21333D84A002E306A /* Municipality.m in Sources */,
+				AF13BCD513340065002E306A /* ProfileMap.m in Sources */,
+				AF13BD3613340644002E306A /* ProfileMapAnnotations.m in Sources */,
+				AF50E5E513359EDA00E03918 /* ProfileHTMLConverter.m in Sources */,
+				AF063D84137AD08F0075E5D0 /* BarView.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		1D6058940D05DD3E006BFB54 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: John Jones (32GW5TZ722)";
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = NJ_Gangs_Prefix.pch;
+				INFOPLIST_FILE = "NJ_Gangs-Info.plist";
+				PRODUCT_NAME = "NJ Gangs";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "C93091B4-232C-41D7-A3D8-9A645CF11255";
+			};
+			name = Debug;
+		};
+		1D6058950D05DD3E006BFB54 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: John Jones (32GW5TZ722)";
+				COPY_PHASE_STRIP = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = NJ_Gangs_Prefix.pch;
+				INFOPLIST_FILE = "NJ_Gangs-Info.plist";
+				PRODUCT_NAME = "NJ Gangs";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "C93091B4-232C-41D7-A3D8-9A645CF11255";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		C01FCF4F08A954540054247B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				PREBINDING = NO;
+				SDKROOT = iphoneos4.2;
+			};
+			name = Debug;
+		};
+		C01FCF5008A954540054247B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: John Jones (32GW5TZ722)";
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				PREBINDING = NO;
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "DBF1D952-629E-42CF-AAD4-6E27ACB16E07";
+				SDKROOT = iphoneos4.2;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1D6058960D05DD3E006BFB54 /* Build configuration list for PBXNativeTarget "NJ Gangs" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1D6058940D05DD3E006BFB54 /* Debug */,
+				1D6058950D05DD3E006BFB54 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C01FCF4E08A954540054247B /* Build configuration list for PBXProject "NJ Gangs" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C01FCF4F08A954540054247B /* Debug */,
+				C01FCF5008A954540054247B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		28D3F201112F7DC200FD0661 /* NJ_Gangs.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				AF13BCA01333D84A002E306A /* Municipality.h */,
+				AF13BCA11333D84A002E306A /* Municipality.m */,
+				AF4233231332845F00E01325 /* Gang.h */,
+				AF4233241332845F00E01325 /* Gang.m */,
+				AFEFC5DE12BEB85A0091C3AD /* County.h */,
+				AFEFC5DF12BEB85A0091C3AD /* County.m */,
+				28860B760F44E54D00985440 /* NJ_Gangs.xcdatamodel */,
+			);
+			currentVersion = 28860B760F44E54D00985440 /* NJ_Gangs.xcdatamodel */;
+			path = NJ_Gangs.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 29B97313FDCFA39411CA2CEA /* Project object */;
+}

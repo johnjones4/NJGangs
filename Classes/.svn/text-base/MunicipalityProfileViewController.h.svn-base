@@ -1,0 +1,17 @@
+//
+//  MunicipalityProfileViewController.h
+//  NJ Gangs
+//
+//  Created by John Jones on 10/7/10.
+//
+
+#import <UIKit/UIKit.h>
+
+
+@interface MunicipalityProfileViewController : UIViewController {
+	NSManagedObject* municipObject;
+}
+
+- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil andMunicipality:(NSManagedObject*) imunicipObject;
+
+@end
